@@ -44,7 +44,7 @@ echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
 
 nano /etc/yum.repos.d/kubernetes.repo
 
-
+swapoff -a
 
 [kubernetes]
 name=Kubernetes
@@ -59,6 +59,8 @@ yum install kubeadm -y
 
 yum install docker -y
 
+
+yum install -y --setopt=obsoletes=0 docker-ce-17.03.0.ce-1.el7.centos docker-ce-selinux-17.03.0.ce-1.el7.centos
 
 systemctl restart docker && systemctl enable docker
 
