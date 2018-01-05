@@ -186,3 +186,5 @@ kube-system   kube-scheduler-master01            1/1       Running   0          
 172.31.109.91	worker01
 172.31.110.151	worker02
 172.31.120.162	worker03
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
