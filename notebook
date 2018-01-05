@@ -104,3 +104,74 @@ kubectl get pods -l
 kubectl delete deployments
 
 
+Install K8s on 3 node Ubuntu 16.04
+=============================
+
+172.31.20.28	master01
+172.31.109.91	worker01
+172.31.110.151	worker02
+
+sudo apt-get -f install
+
+sudo apt-get install apt-transport-https
+sudo apt-get install ca-certificates 
+sudo apt-get install curl
+sudo apt-get install software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-get install docker-ce=17.03.0~ce-0~ubuntu-xenial
+
+sudo usermod -a -G docker $USER
+
+
+root
+====
+
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb http://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+
+sysctl net.bridge.bridge-nf-call-iptables=1
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+
+
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+
+Your Kubernetes master has initialized successfully!
+To start using your cluster, you need to run the following as a regular user:
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+You can now join any number of machines by running the following on each node
+as root:
+  kubeadm join --token 113f27.2e32043717ec9a10 172.31.20.28:6443 --discovery-token-ca-cert-hash sha256:8d18b9fbf243f77eed1984a382b33b5f77beadb2
+44e8d24be0ed70c7dd42d7f2
+
+user@master01:~$ kubectl get pods --all-namespaces
+NAMESPACE     NAME                               READY     STATUS    RESTARTS   AGE
+kube-system   etcd-master01                      1/1       Running   0          11m
+kube-system   kube-apiserver-master01            1/1       Running   0          11m
+kube-system   kube-controller-manager-master01   1/1       Running   0          11m
+kube-system   kube-dns-6f4fd4bdf-25g96           0/3       Pending   0          12m
+kube-system   kube-proxy-zffnr                   1/1       Running   0          12m
+kube-system   kube-scheduler-master01            1/1       Running   0          11m
+user@master01:~$ kubeadm
+
+NAMESPACE     NAME                               READY     STATUS    RESTARTS   AGE
+kube-system   etcd-master01                      1/1       Running   0          1m
+kube-system   kube-apiserver-master01            1/1       Running   0          1m
+kube-system   kube-controller-manager-master01   1/1       Running   0          1m
+kube-system   kube-dns-6f4fd4bdf-sxtc6           3/3       Running   0          1m
+kube-system   kube-flannel-ds-ztrxx              1/1       Running   0          1m
+kube-system   kube-proxy-j9wp2                   1/1       Running   0          1m
+kube-system   kube-scheduler-master01            1/1       Running   0          1m
