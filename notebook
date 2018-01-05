@@ -175,3 +175,8 @@ kube-system   kube-dns-6f4fd4bdf-sxtc6           3/3       Running   0          
 kube-system   kube-flannel-ds-ztrxx              1/1       Running   0          1m
 kube-system   kube-proxy-j9wp2                   1/1       Running   0          1m
 kube-system   kube-scheduler-master01            1/1       Running   0          1m
+
+172.31.20.28	master01
+172.31.109.91	worker01
+172.31.110.151	worker02
+172.31.120.162	worker03
