@@ -151,17 +151,22 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 
 Your Kubernetes master has initialized successfully!
+
 To start using your cluster, you need to run the following as a regular user:
+
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
 You can now join any number of machines by running the following on each node
 as root:
-  kubeadm join --token 113f27.2e32043717ec9a10 172.31.20.28:6443 --discovery-token-ca-cert-hash sha256:8d18b9fbf243f77eed1984a382b33b5f77beadb2
-44e8d24be0ed70c7dd42d7f2
+
+  kubeadm join --token 9931db.c41f3a6509c9bc4e 172.31.20.28:6443 --discovery-token-ca-cert-hash sha256:a9418b1dacc9792396675afa340dbe621ccfaa189b505c55cb50caf30c743537
+
 
 user@master01:~$ kubectl get pods --all-namespaces
 NAMESPACE     NAME                               READY     STATUS    RESTARTS   AGE
