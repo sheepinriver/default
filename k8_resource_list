@@ -1,0 +1,66 @@
+Certified Kubernetes Administrator (CKA) Program
+https://www.cncf.io/certification/expert/
+
+
+https://www.edx.org/course/introduction-kubernetes-linuxfoundationx-lfs158x
+Introduction to Kubernetes
+Free course
+Highly recommended!!! 5/5
+
+https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615
+Scalable Microservices with Kubernetes
+Free course
+Recommend !! 4 /5
+https://www.katacoda.com/
+Kerbernetes Playground 
+
+Free lab
+Highly recommended!!! 5/5
+
+http://kubernetesbyexample.com/
+Kubernetes By Example
+Free lab and example 
+Recommend !! 4 /5
+https://github.com/kelseyhightower/kubernetes-the-hard-way
+Learn kubernetes the hard way
+
+Free github course which you learn every details of bootstrapping a K8s cluster including DNS, apiServer , certificates and etc…
+
+Highly recommended!!! 5/5
+
+
+https://github.com/kubeless/kubeless
+Kubernetes Serverless Framework
+Free
+Recommend !! 4 /5
+https://www.udemy.com/learn-devops-the-complete-kubernetes-course/learn/v4/overview
+https://www.udemy.com/learn-devops-advanced-kubernetes-usage/learn/v4/overview
+
+	Learn DevOps: The Complete Kubernetes Course
+Learn DevOps: Advanced Kubernetes Usage
+
+About 10~12$ each course , 
+
+Recommend !! 4 /5
+http://labs.play-with-k8s.com/
+Play with Kubernetes
+
+Free lab and example 
+Recommend !! 4 /5
+http://product.dangdang.com/24037863.html
+<< Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版）>>
+
+我自己没看完，所以没法说推荐分数。
+https://linuxacademy.com/cp/coursescheduler/view/id/133403
+Certified Kubernetes Administrator (CKA)
+
+这个需要花钱。 
+但是教程做得不咋地，隐藏了太多细节。 
+
+3/5
+
+https://training.linuxfoundation.org/linux-courses/system-administration-training/kubernetes-fundamentals
+Kubernetes Fundamentals (LFS258)
+这个官方的教材好像要200美金，太贵了，没买
+
+
