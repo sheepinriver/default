@@ -1,0 +1,39 @@
+AWS EC2 (Elastic Compute Cloud)  -- Part 1 (or introduction )  
+
+1.	EC2 purchasing options
+
+	On-Demand Instances 
+	Reserved Instances 
+	Spot Instances 
+	Dedicated Hosts
+	Dedicated Instances
+	Scheduled Instances 
+
+2.	EC2 instance types 
+
+	General Purpose: T, M
+	Compute Optimized: C
+	Memory Optimized : R,X/Xe
+	Storage Optimized: D,H,I
+	Accelerated Computing : P,G,F
+
+Demo : Create a EC2 On-Demand instance using AWS console,
+
+3.	Block storage options for EC2
+
+	Instance store - (Local attached storage )
+	Elastic Block Store - EBS (Network attached storage )
+
+Demo : Create a EBS volume and mount to the EC2 instance created previously.
+
+4.	File storage option for EC2 
+
+EFS - Elastic File System
+
+Demo : Create an EFS file share and mount to the EC2 instance created previously
+
+5.	EC2 Auto scaling
+
+Demo : Create an auto scaling of EC2 instances based off CPU utilization.
+
+
