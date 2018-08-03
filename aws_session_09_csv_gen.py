@@ -129,7 +129,7 @@ def random_csv_generator():
     time = np.random.choice(time_selection, num_records, p=[0.25, 0.25, 0.35, 0.15])
     state = np.random.choice(state_selection,num_records, p_state)
     month = np.repeat(str_month, num_records)
-    df = pd.DataFrame (data{'category': category, 'total_price': total_price, 'gender': gender, 'age': age, 'time': time, 'state': state, 'month': month})
+    df = pd.DataFrame (data = {'category': category, 'total_price': total_price, 'gender': gender, 'age': age, 'time': time, 'state': state, 'month': month})
     df.to_csv(random_string_generator() + '_sales_csv.csv', sep='\t', encoding='utf-8', compression='gzip')
 
 
