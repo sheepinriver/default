@@ -12,7 +12,7 @@ num_files = 5
 category_selection = ['digital', 'grocery', 'beauty', 'automotive', 'sports', 'jewelry', 'baby', 'books']
 gender_selection = ['male', 'female', 'unknown']
 total_price_selection = np.arange(39, 800)
-age_selection = [' - 17' ,'18 - 35', '36 - 50' , '51 - 65' , '65 - ']
+age_selection = [' -17' ,'18-35', '36-50' , '51-65' , '65- ']
 time_selection = ['morning', 'afternoon', 'evening', 'night']
 state_selection = ['California',
 'Texas',
