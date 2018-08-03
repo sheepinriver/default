@@ -125,7 +125,7 @@ def random_csv_generator():
     category = np.random.choice(category_selection, num_records, p=[0.1, 0.15, 0.15, 0.05, 0.15, 0.1, 0.15, 0.15])
     total_price = np.random.choice(total_price_selection, num_records)
     gender = np.random.choice(gender_selection, num_records, p=[0.47, 0.47, 0.06])
-    age = np.random.choice(age_selection, num_records, p[0.1, 0.4, 0.3, 0.15, 0.05])
+    age = np.random.choice(age_selection, num_records, p=[0.1, 0.4, 0.3, 0.15, 0.05])
     time = np.random.choice(time_selection, num_records, p=[0.25, 0.25, 0.35, 0.15])
     state = np.random.choice(state_selection,num_records, p_state)
     month = np.repeat(str_month, num_records)
